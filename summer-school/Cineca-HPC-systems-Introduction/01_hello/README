@@ -1,0 +1,20 @@
+Exercise 1
+
+1) Write a job script with "walltime" of 3 minutes that asks for 1 node and 1 core.
+Copy-paste the following in the execution section
+
+hostname
+echo 'Hello World'
+sleep 4
+
+Now add the automatic sending of the email in case of ending and abort of the job.
+
+2) Launch the job with sbatch
+
+3) Check its state with squeue
+
+4) Check its state again with squeue after having increased the sleep to 60, namely: 
+
+hostname
+echo 'Hello World'
+sleep 60

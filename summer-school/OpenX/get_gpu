@@ -1,0 +1,20 @@
+#!/bin/bash
+#
+# source this file to enable get_gpu command from console
+# or execute it to run get_gpu command
+
+function get_gpu () {
+  local partition="m100_usr_prod"
+  local reservation="s_tra_gpu"
+  local accounting="tra21_gpu"
+  
+  command="srun -X -t 30 -N 1 --ntasks-per-node 4 --cpus-per-task=4 --mem=8gb --gres=gpu:1 -p ${partition} -A ${accounting} --reservation ${reservation} --pty /usr/bin/bash"
+  
+  echo -e "\n# Waiting to log into a compute node with GPU resources ..."
+  echo $command
+  $command
+}
+
+[[ "${BASH_SOURCE[0]}" == "${0}" ]] && get_gpu  
+[[ "${BASH_SOURCE[0]}" != "${0}" ]] && echo "Well done! Now you can use get_gpu command to log into a compute node"  
+

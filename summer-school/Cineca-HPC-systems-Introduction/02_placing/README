@@ -1,0 +1,14 @@
+Exercise 2
+
+1) Complete the first MPI exercise (MPI hello world) and compile it with the compiler (mpiicc or mpiifort) in the module intelmpi/2017--binary (default)
+Find the exercise here: https://gitlab.hpc.cineca.it/training/summer-school/tree/master/MPI/Exercise_01
+
+2) Check with:
+$ ldd <executable>
+the list of required dynamic libraries.
+
+3) Write "job.sh" (you can copy it from exercise 1), asking for two nodes and modifying the --ntasks-per-node with the following requests:
+
+#SBATCH --ntasks-per-node=16
+#SBATCH --ntasks-per-node=2
+Run first 32 processes and then 4 processes for each select.

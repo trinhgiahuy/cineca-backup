@@ -1,0 +1,10 @@
+#!/bin/bash
+#SBATCH --time=30:00
+#SBATCH --nodes=1
+#SBATCH --tasks=1
+#SBATCH --partition=gll_usr_prod
+
+module load autoload totalview
+module load autoload intelmpi
+
+totalview -a mpirun -n 2 ./poisson.exe

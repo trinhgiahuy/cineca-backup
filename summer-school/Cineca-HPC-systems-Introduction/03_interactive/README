@@ -1,0 +1,9 @@
+Exercise 3
+
+1) Launch an interactive job. You just need to write the same SLURM directives, without "#SBATCH" and on the same line, as arguments of "srun". Remember to finish the line with "--pty /bin/bash"
+
+$ srun ... <arguments> --pty /bin/bash
+
+2) Check whether you are on a different node 
+
+3) Check that there's an interactive job running 

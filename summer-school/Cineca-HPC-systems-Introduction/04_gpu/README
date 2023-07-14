@@ -1,0 +1,8 @@
+Exercise 4
+
+1) Compile the provided cuda program, after having loaded the required modules
+
+2) Write a job script for a serial execution (1 chunk, 1 cpu) that also asks for
+a gpu device
+
+3) Run the job script 
